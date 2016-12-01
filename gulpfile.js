@@ -73,7 +73,7 @@ gulp.task('watch-images', function(done) {
         .on('end', done);
 });
 gulp.task('watch-js', function(done) {
-    return gulp.watch(['static/js/**/*'], ['build-js'])
+    return gulp.watch(['static/js/**/*','static/components/**/*'], ['build-js'])
         .on('end', done);
 });
 
