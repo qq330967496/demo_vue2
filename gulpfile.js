@@ -53,8 +53,27 @@ gulp.task("build-js", function(callback) {
 });
 
 //监听
-gulp.task('watch', function(done) {
-    return gulp.watch(['static/**/*'], ['copy:html','copy:images','cssmin', 'build-js'])
+/*gulp.task('watch', function(done) {
+    return gulp.watch(['static/!**!/!*'], ['copy:html','copy:images','cssmin', 'build-js'])
+        .on('end', done);
+});*/
+
+gulp.task('watch', ['watch-css','watch-view','watch-images','watch-js']);
+
+gulp.task('watch-css', function(done) {
+    return gulp.watch(['static/css/**/*'], ['cssmin'])
+        .on('end', done);
+});
+gulp.task('watch-view', function(done) {
+    return gulp.watch(['static/view/**/*'], ['copy:html'])
+        .on('end', done);
+});
+gulp.task('watch-images', function(done) {
+    return gulp.watch(['static/images/**/*'], ['copy:images'])
+        .on('end', done);
+});
+gulp.task('watch-js', function(done) {
+    return gulp.watch(['static/js/**/*'], ['build-js'])
         .on('end', done);
 });
 

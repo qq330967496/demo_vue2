@@ -80,14 +80,3 @@ const app = new Vue({
 
     }
 });
-
-//el:'#app'或者new vue().$mount('#app');
-
-//测试接口
-// $.ajax({
-//     url:'/todoList/getData',
-//     type:"get",
-//     success:function(req){
-//         console.log(req);
-//     }
-// });

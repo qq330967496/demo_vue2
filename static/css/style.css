@@ -62,47 +62,6 @@ p {
     word-break: break-all;
 }
 
-.c:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.clamp {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
-
-.hor, .ell, .arrow {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.arrow {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border: 6px solid transparent;
-}
-
-.ell {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.hide {
-    display: none;
-}
-
-.blod {
-    font-weight: 500;
-}
-
 .fl {
     float: left;
 }
@@ -121,77 +80,6 @@ p {
 
 .bc-w {
     background: #fff
-}
-
-.h-40 {
-    height: 35px;
-    line-height: 35px
-}
-
-.hr-line {
-    height: 1px;
-    border: none;
-    border-top: 1px solid #e4e4e4;
-}
-
-.pdl-10 {
-    padding-left: 10px;
-}
-
-.pdl-15 {
-    padding-left: 15px;
-}
-
-.mgt-10 {
-    margin-top: 10px
-}
-
-.mgt-15 {
-    margin-top: 15px
-}
-
-.mgt-20 {
-    margin-top: 20px
-}
-
-.c666 {
-    color: #666
-}
-
-.c323232 {
-    color: #323232
-}
-
-.cd27e00 {
-    color: #d27e00
-}
-
-.ceabf50 {
-    color: #eabf50
-}
-
-.c00c800 {
-    color: #00c800
-}
-
-.c00aaef {
-    color: #00aaef
-}
-
-.cf40 {
-    color: #f40
-}
-
-.fz14 {
-    font-size: 16px;
-}
-
-.fz1_2 {
-    font-size: 1.2rem;
-}
-
-.fz0_96 {
-    font-size: 0.96rem
 }
 
 .button {
@@ -217,12 +105,6 @@ p {
     font-size: .90rem;
     font-family: inherit;
     cursor: pointer;
-}
-
-.btn-lg {
-    height: 2.8rem;
-    line-height: 2.8rem;
-    width: 100%;
 }
 
 /*对话框*/
@@ -315,10 +197,8 @@ p {
     display: block;
 }
 
-
-
 #main{
-    padding:50px 0;
+    padding:1.4rem 0;
 }
 
 

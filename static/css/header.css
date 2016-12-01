@@ -2,7 +2,7 @@ header{
     position: fixed;
     left:50%;
     top:0;
-    padding:10px 0;
+    padding:0.25rem 0;
     border-bottom:1px solid #888;
     width:18.75rem;
     margin-left:-9.375rem;
