@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3b615c29-0892-4e81-9436-aab64b251c74" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/components/test.vue" afterPath="$PROJECT_DIR$/static/components/test.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/lib/utils.js" afterPath="$PROJECT_DIR$/static/lib/utils.js" />
     </list>
     <ignored path="demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="187" selection-end-column="42" />
+            <state relative-caret-position="285">
+              <caret line="186" column="30" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -248,7 +245,7 @@
       <option name="presentableId" value="Default" />
       <updated>1480906134602</updated>
       <workItem from="1480906142422" duration="427000" />
-      <workItem from="1480907073853" duration="2906000" />
+      <workItem from="1480907073853" duration="2938000" />
     </task>
     <task id="LOCAL-00001" summary="初始化PC框架">
       <created>1480908662185</created>
@@ -257,17 +254,24 @@
       <option name="project" value="LOCAL" />
       <updated>1480908662185</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="调整全局样式">
+      <created>1480910006024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480910006024</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3333000" />
+    <option name="totallyTimeSpent" value="3365000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1564805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -311,7 +315,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化PC框架" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化PC框架" />
+    <MESSAGE value="调整全局样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整全局样式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -322,6 +327,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -397,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="187" selection-end-column="42" />
+        <state relative-caret-position="285">
+          <caret line="186" column="30" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="30" />
           <folding />
         </state>
       </provider>
