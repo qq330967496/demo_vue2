@@ -41,7 +41,7 @@
                 utils.alert('警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框');
             },
             showPrompt:function(){
-                utils.prompt('提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框');
+                utils.prompt('提示框');
             },
             showConfirm:function(){
                 utils.confirm('确认框确认框确认框确认框确认框确认框确认框确认框确认框确认框',function(flag){
