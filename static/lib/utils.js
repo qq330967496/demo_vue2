@@ -3,7 +3,31 @@
  * Created by shihua.he on 2016/8/26.
  */
 define(function (require,exports,module) {
-    //var $ = require('zepto');
+    // date扩展格式化日期 | author:Meizz
+    // 对Date的扩展，将 Date 转化为指定格式的String
+    // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
+    // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
+    // 例子：
+    // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423
+    // (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18
+    Date.prototype.Format = function(fmt)
+    { //author: meizz
+        var o = {
+            "M+" : this.getMonth()+1,                 //月份
+            "d+" : this.getDate(),                    //日
+            "h+" : this.getHours(),                   //小时
+            "m+" : this.getMinutes(),                 //分
+            "s+" : this.getSeconds(),                 //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S"  : this.getMilliseconds()             //毫秒
+        };
+        if(/(y+)/.test(fmt))
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o)
+            if(new RegExp("("+ k +")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+        return fmt;
+    }
 
     var utils = {
         //获取url参数
@@ -233,7 +257,69 @@ define(function (require,exports,module) {
                     }
                 }, 500);
             }, delay);
-        }
+        },
+
+        //格式化时间（毫秒）
+        formatTime:function(ms){
+            var ss = 1000;
+            var mi = ss * 60;
+            var hh = mi * 60;
+            var dd = hh * 24;
+
+            var  day =         parseInt(ms / dd);
+            var  hour =        parseInt((ms - day * dd) / hh);
+            var  minute =      parseInt((ms - day * dd - hour * hh) / mi);
+            var  second =      parseInt((ms - day * dd - hour * hh - minute * mi) / ss);
+            var  milliSecond = parseInt(ms - day * dd - hour * hh - minute * mi - second * ss);
+
+            var result = {
+                d:day,
+                h:hour,
+                mi:minute,
+                s:second,
+                ms:milliSecond
+            };
+
+            return result;
+
+        },
+        //格式化时间_补零（毫秒）
+        formatTime_zero:function(ms){
+            var ss = 1000;
+            var mi = ss * 60;
+            var hh = mi * 60;
+            var dd = hh * 24;
+
+            var  day =         utils.getTwoNum(ms / dd);
+            var  hour =        utils.getTwoNum((ms - day * dd) / hh);
+            var  minute =      utils.getTwoNum((ms - day * dd - hour * hh) / mi);
+            var  second =      utils.getTwoNum((ms - day * dd - hour * hh - minute * mi) / ss);
+            var  milliSecond = utils.getThreeNum(ms - day * dd - hour * hh - minute * mi - second * ss);
+
+            var result = {
+                d:day,
+                h:hour,
+                mi:minute,
+                s:second,
+                ms:milliSecond
+            };
+
+            return result;
+
+        },
+        getTwoNum:function getTwoNum(data){
+            if(!data) return "00";
+            var int = parseInt(data);
+            if(int<10)return "0"+int;
+            else return int;
+        },
+        getThreeNum:function (data){
+            if(!data) return "000";
+            var int = parseInt(data);
+            if(int >= 100)return int;
+            else if(int<10)return "00"+int;
+            else return "0"+int;
+        },
     };
 
     module.exports = utils;

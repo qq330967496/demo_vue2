@@ -1,6 +1,10 @@
 <template>
     <div id="test_comp">
         {{msg}}
+        <br>
+        <button @click="showAlert">警告框</button>
+        <button @click="showPrompt">提示框</button>
+        <button @click="showConfirm">确认框</button>
     </div>
 </template>
 
@@ -9,10 +13,6 @@
 <script>
 
     import utils from 'utils';
-//    import $ from 'zepto';
-
-
-
 
     export default{
         data(){
@@ -37,7 +37,21 @@
             _this.msg='测试';
         },
         methods: {
-
+            showAlert:function(){
+                utils.alert('警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框警告框');
+            },
+            showPrompt:function(){
+                utils.prompt('提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框提示框');
+            },
+            showConfirm:function(){
+                utils.confirm('确认框确认框确认框确认框确认框确认框确认框确认框确认框确认框',function(flag){
+                   if(flag){
+                       utils.alert('是');
+                   } else{
+                       utils.alert('否');
+                   }
+                });
+            },
         }
     }
 </script>
