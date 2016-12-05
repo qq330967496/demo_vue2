@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9da417c4-adeb-4c95-a542-a5745d5145a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/icon-apple.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/components/about.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/components/footer.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/components/header.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/components/home.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/components/test.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/demo_fontclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/demo_symbol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/demo_unicode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/icon/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/iscroll/iscroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/swiper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/web-storage-cache.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/zepto/zepto.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/zepto/zepto.tap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/view/app.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,8 +54,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="228">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -259,7 +225,7 @@
       <option name="presentableId" value="Default" />
       <updated>1480559762832</updated>
       <workItem from="1480559766180" duration="2642000" />
-      <workItem from="1480905151664" duration="154000" />
+      <workItem from="1480905151664" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1480559803472</created>
@@ -275,11 +241,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480564941264</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初始化">
+      <created>1480905319329</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480905319329</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2796000" />
+    <option name="totallyTimeSpent" value="2845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -324,9 +297,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="初始化" />
     <MESSAGE value="说明文档" />
-    <option name="LAST_COMMIT_MESSAGE" value="说明文档" />
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -386,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="228">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>
