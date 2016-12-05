@@ -8,11 +8,11 @@ tests/
 .settings/
 .buildpath
 .project
-.idea
+.idea/*
 node_modules
 test.js
 web/*
 !web/.htaccess
 !web/favicon.ico
 !web/index.php
-workspace.xml
+
