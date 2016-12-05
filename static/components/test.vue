@@ -1,6 +1,7 @@
 <template>
     <div id="test_comp">
         {{msg}}
+        <button @click="showPrompt">提示框</button>
     </div>
 </template>
 
@@ -37,7 +38,9 @@
             _this.msg='测试';
         },
         methods: {
-
+            showPrompt:function(){
+                utils.prompt('提示框');
+            },
         }
     }
 </script>

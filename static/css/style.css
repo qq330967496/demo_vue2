@@ -178,7 +178,6 @@ p {
 }
 
 .dialog-prompt {
-    background-color: rgba(0, 0, 0, .8);
     color: #fff;
     max-width: 140px;
     position: absolute;
@@ -187,14 +186,14 @@ p {
     margin-left: -8rem;
     margin-top: 0;
     padding: 15px 20px;
-    top: 45%;
+    top: 300%;
     text-align: center;
     border-radius: .35rem;
-    -webkit-transform: translate3d(0, 0, 0) scale(1.185);
-    transform: translate3d(0, 0, 0) scale(1.185);
-    -webkit-transition-property: -webkit-transform, opacity;
-    transition-property: transform, opacity;
-    display: block;
+
+    /*文字不透明，背景透明*/
+    opacity:1;
+    filter:Alpha(opacity=1); /* IE8 以及更早的浏览器 */
+    background:rgba(0,0,0,0.8) !important;
 }
 
 #main{
