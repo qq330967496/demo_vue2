@@ -1,0 +1,17 @@
+# ---> Yii
+assets/*
+!assets/.gitignore
+runtime/*
+!runtime/.gitignore
+web/assets/*
+tests/
+.settings/
+.buildpath
+.project
+.idea
+node_modules
+test.js
+web/*
+!web/.htaccess
+!web/favicon.ico
+!web/index.php
