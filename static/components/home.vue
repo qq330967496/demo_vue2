@@ -1,6 +1,7 @@
 <template>
     <div>
         {{msg}}
+        <input type="checkbox" @change="change($event)" v-model="item.status"/>
     </div>
 </template>
 
@@ -14,7 +15,10 @@
     export default{
         data(){
             return{
-                msg:''
+                msg:'',
+                item:{
+                    status:'1'
+                }
             }
         },
         beforeCreate: function () {
@@ -34,7 +38,9 @@
             });
         },
         methods: {
-
+            change:function(event){
+                console.log(event.target.checked);
+            }
         }
     }
 </script>
