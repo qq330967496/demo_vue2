@@ -1,6 +1,11 @@
 <template>
   <div>
-    {{msg}}
+    <div @click="toBack">
+      << 返回
+    </div>
+    <div>
+      {{msg}}
+    </div>
   </div>
 </template>
 
@@ -9,7 +14,12 @@
     name: 'demo',
     data() {
       return {
-        msg: 'demo页面'
+        msg: 'demo页面',
+      }
+    },
+    methods:{
+      toBack(){
+        this.$router.goBack();
       }
     }
   }

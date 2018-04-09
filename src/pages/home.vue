@@ -14,7 +14,8 @@
     name: 'home',
     data() {
       return {
-        msg: '首页'
+        msg: '首页',
+        show : false
       }
     },
     mounted(){
@@ -22,7 +23,7 @@
     },
     methods:{
       toPage(url){
-        this.$router.push(url);
+        this.$router.push("/page/"+url);
       }
     }
   }
@@ -32,4 +33,10 @@
   @import "../assets/css/common";
   div {
   }
+  .background {
+    background: #000;
+    width: 100px;
+    height: 100px;
+  }
 </style>
+
