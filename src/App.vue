@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <sh-header ref="header" title="ETC车宝"></sh-header>
     <transition>
       <router-view/>
     </transition>
@@ -41,5 +42,12 @@
     max-width: 750px;
     margin: 0 auto;
     font-size: pxToRem(32);
+  }
+  #app{
+    display: flex;
+    flex-direction: column;
+    *{
+
+    }
   }
 </style>

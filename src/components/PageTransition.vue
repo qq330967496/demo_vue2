@@ -1,25 +1,27 @@
 <template>
-  <div>
-  <transition :name="transitionName">
-    <router-view class="child-view"></router-view>
-  </transition>
+  <div class="pageTransition">
+    <transition :name="transitionName">
+      <router-view class="child-view"></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
   export default {
-    data () {
+    data() {
       return {
         transitionName: 'slide-left'
       }
     },
     watch: {
-      '$route' (to, from) {
-        const toDepth = to.path.split('/').length;
-        const fromDepth = from.path.split('/').length;
-        console.log(to,from);
-        console.log(toDepth,fromDepth);
-        this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+      '$route'(to, from) {
+        let isBack = this.$router.isBack;  //  监听路由变化时的状态为前进还是后退
+        if (isBack) {
+          this.transitionName = 'slide-right'
+        } else {
+          this.transitionName = 'slide-left'
+        }
+        this.$router.isBack = false
       }
     }
   }
@@ -28,19 +30,32 @@
 <style lang="scss" scoped>
   @import "../assets/css/common";
 
+  .pageTransition {
+    position: relative;
+    height: 100%;
+  }
+
   .child-view {
+    box-shadow: pxToRem(-10) 0 pxToRem(15) #00000033;
     position: absolute;
-    width:100%;
-    transition: all .3s cubic-bezier(.55,0,.1,1);
+    width: 100%;
+    height: 100%;
+    /*transition: all 3s cubic-bezier(.55,0,.1,1);*/
+    transition: all .5s cubic-bezier(.55, 0, .1, 1);
+    overflow: auto;
   }
+
   .slide-left-enter, .slide-right-leave-active {
-    opacity: 0;
-    -webkit-transform: translate(pxToRem(750), 0);
-    transform: translate(pxToRem(750), 0);
+    /*opacity: 0;*/
+    z-index: 0;
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
   }
+
   .slide-left-leave-active, .slide-right-enter {
-    opacity: 0;
-    -webkit-transform: translate(pxToRem(-750), 0);
-    transform: translate(pxToRem(-750), 0);
+    /*opacity: 0;*/
+    z-index: -1;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
   }
 </style>

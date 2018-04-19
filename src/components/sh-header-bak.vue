@@ -297,6 +297,7 @@
   };
 
   export default {
+    name:'sh-header',
     props: {
       hide_back: Boolean,//是否隐藏返回按钮
       hide_close: Boolean,//是否隐藏关闭按钮
@@ -356,7 +357,8 @@
         }else{
             window.history.back();
         }*/
-        window.history.back();
+//        window.history.back();
+        this.$router.goBack();
       },
       close: function () {
         h_utils.goToApp('closeWebView', '-1')

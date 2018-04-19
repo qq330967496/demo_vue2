@@ -1,11 +1,6 @@
 <template>
   <div>
-    <div @click="toBack">
-      << 返回
-    </div>
-    <div>
       {{msg}}
-    </div>
   </div>
 </template>
 

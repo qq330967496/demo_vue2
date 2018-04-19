@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import utils from './assets/js/utils';//工具类
+import Shui from './assets/js/sh-ui';
+Vue.use(Shui);
 
 Vue.config.productionTip = false;
 

@@ -23,7 +23,7 @@
     },
     methods:{
       toPage(url){
-        this.$router.push("/page/"+url);
+        this.$router.push("/"+url);
       }
     }
   }
