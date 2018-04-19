@@ -309,9 +309,7 @@
     },
     data() {
       return {
-//                is_show:false,
         token: '',
-//                platform:'',
         is_weixin: h_utils.isWeixin(),
         is_ios: h_utils.isIos(),
         is_iphoneX: h_utils.isIphoneX(),
