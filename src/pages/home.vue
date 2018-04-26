@@ -6,6 +6,10 @@
     <div @click="toPage('demo')">
       跳转到demo
     </div>
+    <div @click="click">
+      {{obj.key}}
+    </div>
+    <input type="text" v-model="str"/>{{str}}|
   </div>
 </template>
 
@@ -15,7 +19,12 @@
     data() {
       return {
         msg: '首页',
-        show : false
+        show : false,
+        arr: ['a', 'b', 'c'],
+        str:'str',
+        obj:{
+          key:'val'
+        },
       }
     },
     mounted(){
@@ -24,7 +33,11 @@
     methods:{
       toPage(url){
         this.$router.push("/"+url);
-      }
+      },
+      click(){
+//        this.$set(this.items,0,'d');
+        this.$set(this.obj,'key','val2');
+      },
     }
   }
 </script>
