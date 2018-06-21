@@ -1,55 +1,60 @@
 <template>
   <div>
-    <div>
-      {{msg}}
+    <div class="tab_mod">
+      <div class="tab" :class="{actived:selected_tab==item}" v-for="item in tabs" @click="changeTab(item)">
+        {{item}}
+      </div>
     </div>
-    <div @click="toPage('demo')">
-      跳转到demo
+    <div class="item_mod" v-if="selected_tab == 'tab1'">
+      C1
     </div>
-    <div @click="click">
-      {{obj.key}}
+    <div class="item_mod" v-if="selected_tab == 'tab2'">
+      C2
     </div>
-    <input type="text" v-model="str"/>{{str}}|
   </div>
 </template>
 
 <script>
+
+  var b = 'b1';
+  var obj = {
+      b:'b2',
+      c:function(){
+        return this.b;
+      }
+  }
+  console.log(obj.c());
+  var d = obj.c;
+  console.log(d());
+
+
   export default {
     name: 'home',
     data() {
       return {
-        msg: '首页',
-        show : false,
-        arr: ['a', 'b', 'c'],
-        str:'str',
-        obj:{
-          key:'val'
-        },
+        tabs:['tab1','tab2'],
+        selected_tab:'tab1'
       }
     },
     mounted(){
 
     },
     methods:{
-      toPage(url){
-        this.$router.push("/"+url);
-      },
-      click(){
-//        this.$set(this.items,0,'d');
-        this.$set(this.obj,'key','val2');
+      changeTab(item){
+        this.selected_tab = item;
       },
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/common";
-  div {
-  }
-  .background {
-    background: #000;
-    width: 100px;
-    height: 100px;
+  .tab_mod{
+    .tab{
+      display: inline-block;
+      &.actived{
+        background: #f00;
+      }
+    }
   }
 </style>
 
