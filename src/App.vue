@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <sh-header ref="header" title="ETC车宝"></sh-header>
+    <!--<sh-header ref="header" title="ETC车宝"></sh-header>-->
     <transition>
       <router-view/>
     </transition>

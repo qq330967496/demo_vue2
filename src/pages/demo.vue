@@ -29,6 +29,4 @@
 
 <style lang="scss" scoped>
   @import "../assets/css/common";
-  div {
-  }
 </style>

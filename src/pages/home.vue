@@ -15,19 +15,6 @@
 </template>
 
 <script>
-
-  var b = 'b1';
-  var obj = {
-      b:'b2',
-      c:function(){
-        return this.b;
-      }
-  }
-  console.log(obj.c());
-  var d = obj.c;
-  console.log(d());
-
-
   export default {
     name: 'home',
     data() {

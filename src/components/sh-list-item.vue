@@ -83,7 +83,7 @@
         text-align: right;
     }
 
-    .sh-right input {
+    .sh-right input{
         text-align: right;
     }
 

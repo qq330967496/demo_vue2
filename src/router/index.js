@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import PageTransition from '@/components/PageTransition'
 
 //页面
+import Index from '@/pages/index'
+import List from '@/pages/list'
 import Home from '@/pages/home'
 import Demo from '@/pages/demo'
 
@@ -23,6 +25,12 @@ export default new Router({
       name: 'pageTransition',
       component: PageTransition,
       children: [{
+        path: '/index',
+        component: Index
+      },{
+        path: '/list',
+        component: List
+      },{
         path: '/home',
         component: Home
       }, {
