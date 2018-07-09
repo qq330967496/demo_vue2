@@ -1,3 +1,6 @@
+<!--
+1.0.1 使用line-height处理居中，不支持多行按钮
+-->
 <template>
     <div class="sh-btn"
          @click="bindClick"
@@ -13,8 +16,9 @@
 <style>
     .sh-btn {
         text-align: center;
-        line-height: 100%;
-        padding: 0.75rem 0;
+        /*padding: 0.75rem 0;*/
+        height: 2.25rem;
+        line-height: 2.25rem;
         box-sizing: border-box;
         background: transparent;
         color: #d27e00;

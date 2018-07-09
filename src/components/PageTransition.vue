@@ -36,7 +36,7 @@
   }
 
   .child-view {
-    box-shadow: pxToRem(-10) 0 pxToRem(15) #00000033;
+    box-shadow: pxToRem(-10) 0 pxToRem(15) rgba(0,0,0,0.2);
     position: absolute;
     width: 100%;
     height: 100%;
