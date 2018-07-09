@@ -4,10 +4,11 @@ import Router from 'vue-router'
 import PageTransition from '@/components/PageTransition'
 
 //页面
-import Index from '@/pages/index'
-import List from '@/pages/list'
-import Home from '@/pages/home'
-import Demo from '@/pages/demo'
+import index from '@/pages/index'
+import list from '@/pages/demo/list'
+import dialog from '@/pages/demo/dialog'
+import home from '@/pages/home'
+import demo from '@/pages/demo'
 
 Vue.use(Router);
 
@@ -18,7 +19,7 @@ Router.prototype.goBack = function () {
 
 export default new Router({
   mode: 'history',
-  transitionOnLoad:true,
+  transitionOnLoad: true,
   routes: [
     {
       path: '/',
@@ -26,16 +27,19 @@ export default new Router({
       component: PageTransition,
       children: [{
         path: '/index',
-        component: Index
-      },{
-        path: '/list',
-        component: List
-      },{
+        component: index
+      }, {
+        path: '/demo/list',
+        component: list
+      }, {
+        path: '/demo/dialog',
+        component: dialog
+      }, {
         path: '/home',
-        component: Home
+        component: home
       }, {
         path: '/demo',
-        component: Demo
+        component: demo
       }]
     }
   ]

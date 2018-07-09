@@ -54,25 +54,23 @@
   export default {
     name: 'index',
     data() {
-      return {
-      }
+      return {}
     },
-    beforeMount(){
+    beforeMount() {
 //      this.$parent.$parent.$refs.header.$set('title',1);
 //      console.log(window.myHeader);
     },
-    mounted(){
+    mounted() {
 
     },
-    methods:{
-      toBack(){
+    methods: {
+      toBack() {
         this.$router.goBack();
       },
       toDemo(mod) {
         this.$router.push({
-          path:'/'+mod,
-          params:{
-          }
+          path: '/demo/' + mod,
+          params: {}
         })
       }
     }
