@@ -1,4 +1,8 @@
-<!--头部组件 v3.0.0-->
+<!--头部组件 v3.0.1-->
+<!--
+v3.0.1 支持状态栏样式
+v3.0.0 兼容iphoneX
+-->
 <template>
   <!--兼容iphoneX-->
   <header v-if="!is_weixin" :class="{'ios':is_ios,'iphoneX':is_iphoneX,'white':bar_style=='white','tran':is_header_transparent}">
@@ -46,11 +50,11 @@
   }
 
   header.ios {
-    height: 3.75rem;
+    height: 3.35rem;
   }
 
   header.iphoneX {
-    height: 4.25rem;
+    height: 3.85rem;
   }
 
   header > .header_inner {
@@ -62,6 +66,7 @@
     box-sizing: border-box;
     top: 0;
     left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   header > .header_inner > .header_main {
@@ -251,47 +256,53 @@
 
 <script>
   var h_utils = {
-    //移动端环境判断
-    ua: navigator.userAgent,
-    //微信
-    isWeixin: function () {
-      return this.ua.match(/MicroMessenger/i);
-    },
-    //ios
-    isIos: function () {
-      return !!this.ua.match(/iPhone|iPod|iPad/i);
-    },
-    //安卓
-    isAndroid: function () {
-      return !!this.ua.match(/Android/i);
-    },
-    //iphoneX
-    isIphoneX: function () {
-      if (this.isIos()) {
-        return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375);
-      } else {
-        return false;
-      }
-    },
-    //执行指令
-    goToApp: function (cmd, param) {
-      //跟app的交互
-      if (h_utils.isAndroid()) {
-        console.log('执行安卓指令:' + cmd, param);
-        window.JavaScriptHelper.sendCommand(cmd, param); // java接口调用
-      } else if (h_utils.isIos()) {
-        console.log('执行IOS指令:' + cmd, param);
-        window.location = cmd + ":" + param;
-      }
-    },
-    /**
-     * 兼容性获取滚动条到顶部的距离
-     * @returns {number|Number}
-     */
-    getScrollTop: function () {
-      return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-    },
-  };
+        //移动端环境判断
+        ua: navigator.userAgent,
+        //微信
+        isWeixin: function () {
+            return this.ua.match(/MicroMessenger/i);
+        },
+        //ios
+        isIos: function () {
+            return !!this.ua.match(/iPhone|iPod|iPad/i);
+        },
+        //安卓
+        isAndroid: function () {
+            return !!this.ua.match(/Android/i);
+        },
+        //iphoneX
+        isIphoneX: function () {
+            if (this.isIos()) {
+                return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375);
+            } else {
+                return false;
+            }
+        },
+        //执行指令
+        goToApp: function (cmd, param) {
+            var _self = this;
+            if(cmd == 'closeWebView'){
+                _self.goToApp('setStatusBarStyle','style==0');
+            }
+            //跟app的交互
+            setTimeout(function() {
+                if (_self.isAndroid()) {
+                    console.log('执行安卓指令:' + cmd + ':' + param);
+                    window.JavaScriptHelper ? window.JavaScriptHelper.sendCommand(cmd, param) : ''; // java接口调用
+                } else if (_self.isIos()) {
+                    console.log('执行IOS指令:' + cmd + ':' + param);
+                    window.location = cmd + ":" + param;
+                }
+            },300);
+        },
+        /**
+         * 兼容性获取滚动条到顶部的距离
+         * @returns {number|Number}
+         */
+        getScrollTop: function () {
+            return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        },
+    };
 
   export default {
     name:'sh-header',
@@ -359,7 +370,7 @@
         }
       },
       close: function () {
-        h_utils.goToApp('closeWebView', '-1')
+        h_utils.goToApp('closeWebView', '-1');
       },
     }
   };
