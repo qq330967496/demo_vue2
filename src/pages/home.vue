@@ -16,7 +16,6 @@
 
 <script>
   export default {
-    name: 'home',
     data() {
       return {
         tabs:['tab1','tab2'],

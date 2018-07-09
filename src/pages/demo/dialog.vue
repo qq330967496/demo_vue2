@@ -67,7 +67,6 @@
 
 <script>
   export default {
-    name: 'index',
     data() {
       return {
         show_common: false,

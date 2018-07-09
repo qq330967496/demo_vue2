@@ -4,11 +4,12 @@ import Router from 'vue-router'
 import PageTransition from '@/components/PageTransition'
 
 //页面
-import index from '@/pages/index'
-import list from '@/pages/demo/list'
+import index  from '@/pages/index'
+import list   from '@/pages/demo/list'
 import dialog from '@/pages/demo/dialog'
-import home from '@/pages/home'
-import demo from '@/pages/demo'
+import toast  from '@/pages/demo/toast'
+import home   from '@/pages/home'
+import demo   from '@/pages/demo'
 
 Vue.use(Router);
 
@@ -34,6 +35,9 @@ export default new Router({
       }, {
         path: '/demo/dialog',
         component: dialog
+      }, {
+        path: '/demo/toast',
+        component: toast
       }, {
         path: '/home',
         component: home
