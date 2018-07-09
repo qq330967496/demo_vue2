@@ -62,7 +62,7 @@
 <script>
     var pageScroll = (function () {
         var fn = function (e) {
-            e.preventDefault();
+//            e.preventDefault();
             e.stopPropagation();
         };
         var islock = false;
