@@ -14,8 +14,6 @@ import flow  from '@/pages/demo/flow'
 import operlist  from '@/pages/demo/operlist'
 import scroll  from '@/pages/demo/scroll'
 import header  from '@/pages/demo/header'
-import home   from '@/pages/home'
-import demo   from '@/pages/demo'
 
 Vue.use(Router);
 
@@ -62,13 +60,7 @@ export default new Router({
       }, {
         path: '/demo/header',
         component: header
-      }, {
-        path: '/home',
-        component: home
-      }, {
-        path: '/demo',
-        component: demo
-      }]
+      },]
     }
   ]
 })
