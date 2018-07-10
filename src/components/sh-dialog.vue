@@ -272,7 +272,7 @@
         this.this_show = false;
       },
       toShow() {
-        document.body.appendChild(this.$el);
+        document.querySelector('.child-view').appendChild(this.$el);
         this.this_show = true;
         pageScroll.lock();
         pageScroll.unlock(this.$el);
@@ -288,7 +288,7 @@
       close(isCommon) {
         this.init();
         if (isCommon) {
-          document.body.removeChild(this.$el);
+          document.querySelector('.child-view').removeChild(this.$el);
         } else {
           this.$emit('close');
         }

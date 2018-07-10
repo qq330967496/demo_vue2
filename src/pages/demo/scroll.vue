@@ -19,24 +19,23 @@
 <script>
   export default {
     data() {
-      return {
-      }
+      return {}
     },
-    beforeMount(){
+    beforeMount() {
     },
-    mounted(){
+    mounted() {
 
     },
-    methods:{
-      bindPullDown(){
+    methods: {
+      bindPullDown() {
+        let self = this;
         console.log('绑定下拉');
-        let _self = this;
-        _self.$toast.loading();
-        window.setTimeout(function(){
+        this.$toast.loading();
+        window.setTimeout(() => {
           console.log('关闭下拉');
-          _self.$refs.shScroll.closePullDown();
-          _self.$toast.close();
-        },2000);
+          self.$toast.close();
+          self.$refs.shScroll?self.$refs.shScroll.closePullDown():'';
+        }, 2000);
       }
     }
   }

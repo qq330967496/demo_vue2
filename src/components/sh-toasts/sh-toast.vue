@@ -275,7 +275,7 @@
       toShow() {
         var _self = this;
         pageScroll.lock();
-        document.body.appendChild(this.$el);
+        document.querySelector('.child-view').appendChild(this.$el);
         this.this_show = true;
       },
       setTimer() {
@@ -288,7 +288,15 @@
         if(this.this_show){
           pageScroll.unlock();
           this.this_show = false;
-          document.body.removeChild(this.$el);
+          try{
+            document.querySelector('.child-view').removeChild(this.$el);
+          }catch(err){
+            if(err.name === 'NotFoundError'){
+              console.warn('toast已关闭');
+            }else{
+              throw Error(err);
+            }
+          }
         }
       }
     },
