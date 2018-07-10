@@ -15,6 +15,7 @@ v3.0.0 兼容iphoneX
         <div class="left">
           <div class="text_mod" v-if="left_text!=null"
                @click.stop="leftEvent()">
+            {{left_text}}
           </div>
           <div class="arrow_mod" @click.stop="leftEvent()" v-if="left_text==null">
             <span class="arrow_left"></span>
@@ -334,16 +335,17 @@ v3.0.0 兼容iphoneX
       }
     },
     mounted: function () {
-      var _self = this;
-      if (_self.is_transparent) {
-        _self.is_header_transparent = true;
-        window.onscroll = function () {
+      this.is_header_transparent = this.is_transparent;
+      if (this.is_transparent) {
+        window.onscroll = () => {
           if (h_utils.getScrollTop() > 10) {
-            _self.is_header_transparent = false;
+            this.is_header_transparent = false;
           } else {
-            _self.is_header_transparent = true;
+            this.is_header_transparent = true;
           }
         };
+      }else{
+        window.onscroll = null;
       }
     },
     methods: {
@@ -377,6 +379,22 @@ v3.0.0 兼容iphoneX
       close: function () {
         h_utils.goToApp('closeWebView', '-1');
       },
+    },
+    watch:{
+      is_transparent(){
+        this.is_header_transparent = this.is_transparent;
+        if (this.is_transparent) {
+          window.onscroll = () => {
+            if (h_utils.getScrollTop() > 10) {
+              this.is_header_transparent = false;
+            } else {
+              this.is_header_transparent = true;
+            }
+          };
+        }else{
+          window.onscroll = null;
+        }
+      }
     }
   };
 </script>

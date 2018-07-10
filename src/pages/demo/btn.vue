@@ -31,20 +31,21 @@
 <script>
   export default {
     data() {
-      return {
-      }
+      return {}
     },
-    beforeMount(){
+    beforeMount() {
     },
-    mounted(){
+    mounted() {
 
     },
-    methods:{
-    }
+    methods: {}
   }
 </script>
 
 <style lang="scss" scoped>
   @import "../../assets/css/common";
 
+  .padding-mod {
+    padding: 0.5rem;
+  }
 </style>

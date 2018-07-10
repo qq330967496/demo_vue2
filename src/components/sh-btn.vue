@@ -19,16 +19,16 @@
   .sh-btn {
     text-align: center;
     /*padding: 0.75rem 0;*/
-    height: 2.25rem;
-    line-height: 2.25rem;
+    height: 2.45rem;
+    line-height: 2.45rem;
     box-sizing: border-box;
     background: transparent;
-    color: #d27e00;
-    border: 1px solid #eabf4f;
+    color: #f1cf92;
+    border: 1px solid #f1cf92;
 
-    -webkit-border-radius: 0.25rem;
-    -moz-border-radius: 0.25rem;
-    border-radius: 0.25rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
   }
 
   .sh-btn:active {
@@ -43,9 +43,9 @@
   }
 
   .sh-btn.primary {
-    color: #8e4d00;
-    background-color: #eabf4f;
-    border-color: #eabf4f;
+    color: #333;
+    background-color: #f1cf92;
+    border-color: #f1cf92;
   }
 
   .sh-btn.danger {
