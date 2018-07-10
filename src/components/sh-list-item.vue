@@ -1,8 +1,8 @@
 <template>
   <div class="sh-list-item"
-       @touchstart.stop="start"
-       @touchmove.stop="move"
-       @touchend.stop="!isMoving?bindClick():''"
+       @touchstart="start"
+       @touchmove="move"
+       @touchend="!isMoving?bindClick():''"
        :class="{arrow:type=='arrow',more:type=='more',checkbox:type=='checkbox',switch:type=='switch'}">
     <div class="sh-list-item-inner">
       <div class="sh-list-item-content sh-left"
@@ -298,7 +298,7 @@
         this_show_sub: false,
         this_scale: [],
         this_disabled: false,
-        isMoving:false,
+
       }
     },
     beforeMount: function () {
