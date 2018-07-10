@@ -277,12 +277,6 @@
         pageScroll.lock();
         document.body.appendChild(this.$el);
         this.this_show = true;
-        window.setTimeout(function () {
-          if(_self.this_show) {
-            console.error('加载超时...');
-            _self.close();
-          }
-        }, _self.this_time);
       },
       setTimer() {
         var _self = this;

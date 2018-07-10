@@ -1,16 +1,17 @@
 <template>
   <div>
-    <sh-scroll is_debug @pull_down="bindPullDown" ref="shScroll" :can_pull_down="true">
-      <!--<div v-for="item in 1000">
+    <!--is_debug-->
+    <sh-scroll @pull_down="bindPullDown" ref="shScroll" :can_pull_down="true">
+      <div v-for="item in 1000">
         {{item}}
-      </div>-->
-      <sh-list>
+      </div>
+      <!--<sh-list>
           <sh-list-item v-for="item in 30" :scale="[1,null,null]">
               <template slot="left">
                   {{item}}<br/>
               </template>
           </sh-list-item>
-      </sh-list>
+      </sh-list>-->
     </sh-scroll>
   </div>
 </template>

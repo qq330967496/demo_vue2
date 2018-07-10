@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <!--<sh-header ref="header" title="ETC车宝"></sh-header>-->
-    <transition>
-      <router-view/>
-    </transition>
+    <sh-header ref="header" title="ETC车宝"></sh-header>
+    <div id="main">
+      <transition>
+        <router-view/>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,7 @@
     name: 'App',
     data() {
       return {
-        transitionName:'slide-left'
+        transitionName: 'slide-left'
       }
     },
     /*watch: {
@@ -35,11 +37,12 @@
 <style lang="scss">
   @import "./assets/css/common";
 
-  html, body{
+  html, body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-family: 'Microsoft Yahei', '宋体', Arial;
     /*background: #ccc;*/
   }
+
   html, body, #app {
     width: 100%;
     height: 100%;
@@ -48,12 +51,18 @@
     margin: 0 auto;
     font-size: pxToRem(32);
   }
-  #app{
+
+  #app {
     display: flex;
     flex-direction: column;
     /*background: #ebebeb;*/
-    *{
+    * {
 
     }
+  }
+
+  #main {
+    flex: 1;
+    overflow-y: auto;
   }
 </style>
