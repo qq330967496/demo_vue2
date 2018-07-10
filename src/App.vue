@@ -10,6 +10,7 @@
 </template>
 
 <script>
+  import utils from 'utils';
   export default {
     name: 'App',
     data() {
@@ -17,7 +18,18 @@
         transitionName: 'slide-left'
       }
     },
-    /*watch: {
+    mounted(){
+    },
+    methods:{
+      initHeader(){
+        this.$nextTick(()=>{
+          this.$refs.header.this_title='ETC车宝';
+          this.$refs.header.this_left_text=null;
+          this.$refs.header.this_right_test=null;
+        })
+      }
+    },
+    watch: {
       '$route' (to, from) {
         console.log('路由监听',to,from);
         // 如果isBack为true时，证明是用户点击了回退，执行slide-right动画
@@ -29,8 +41,11 @@
         }
         // 做完回退动画后，要设置成前进动画，否则下次打开页面动画将还是回退
         this.$router.isBack = false;
+
+        // 路由更变初始化头部
+        this.initHeader();
       }
-    }*/
+    }
   }
 </script>
 

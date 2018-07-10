@@ -77,6 +77,8 @@
 </template>
 
 <script>
+  import utils from 'utils'
+
   export default {
     data() {
       return {
@@ -91,7 +93,14 @@
     beforeMount(){
     },
     mounted(){
-
+      //修改header
+      this.$nextTick(()=>{
+        utils.setHeader.call(this,{
+          title:'修改顶部title',
+          left_text:'<左边',
+          right_text:'右边>'
+        });
+      });
     },
     methods:{
       bindLeft(){

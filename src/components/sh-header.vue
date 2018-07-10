@@ -13,26 +13,26 @@ v3.0.0 兼容iphoneX
       </div>
       <div class="header_main">
         <div class="left">
-          <div class="text_mod" v-if="left_text!=null"
+          <div class="text_mod" v-if="this_left_text!=null"
                @click.stop="leftEvent()">
-            {{left_text}}
+            {{this_left_text}}
           </div>
-          <div class="arrow_mod" @click.stop="leftEvent()" v-if="left_text==null">
+          <div class="arrow_mod" @click.stop="leftEvent()" v-if="this_left_text==null">
             <span class="arrow_left"></span>
           </div>
-          <div class="across_mod" @click.stop="close()" v-if="right_text!=null">
+          <div class="across_mod" @click.stop="close()" v-if="this_right_text!=null">
             <span class="across"></span>
           </div>
         </div>
         <div class="title">
-          {{title ? title : ''}}
+          {{this_title ? this_title : ''}}
         </div>
         <div @click.stop="rightEvent()"
              class="right">
-          <div class="text_mod" v-if="right_text!=null">
-            {{right_text}}
+          <div class="text_mod" v-if="this_right_text!=null">
+            {{this_right_text}}
           </div>
-          <div class="across_mod" v-if="right_text==null">
+          <div class="across_mod" v-if="this_right_text==null">
             <span class="across"></span>
           </div>
         </div>
@@ -327,6 +327,9 @@ v3.0.0 兼容iphoneX
     data() {
       return {
         token: '',
+        this_title:'',
+        this_left_text:'',
+        this_right_text:'',
         is_weixin: h_utils.isWeixin(),
         is_ios: h_utils.isIos(),
         is_iphoneX: h_utils.isIphoneX(),
@@ -335,6 +338,10 @@ v3.0.0 兼容iphoneX
       }
     },
     mounted: function () {
+
+      this.this_title = this.title;
+      this.this_left_text = this.left_text;
+      this.this_right_text = this.right_text;
       this.is_header_transparent = this.is_transparent;
       if (this.is_transparent) {
         window.onscroll = () => {
@@ -381,8 +388,8 @@ v3.0.0 兼容iphoneX
       },
     },
     watch:{
-      is_transparent(){
-        this.is_header_transparent = this.is_transparent;
+      is_transparent(val){
+        this.is_header_transparent = val;
         if (this.is_transparent) {
           window.onscroll = () => {
             if (h_utils.getScrollTop() > 10) {
@@ -394,7 +401,16 @@ v3.0.0 兼容iphoneX
         }else{
           window.onscroll = null;
         }
-      }
+      },
+      title(val){
+        this.this_title = val;
+      },
+      left_text(val){
+        this.this_left_text = val;
+      },
+      right_text(val){
+        this.this_right_text = val;
+      },
     }
   };
 </script>

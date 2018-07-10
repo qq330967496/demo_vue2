@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import utils from './assets/js/utils';//工具类
+import utils from 'utils';
 import Shui from './assets/js/sh-ui';
 Vue.use(Shui);
 
@@ -14,5 +14,7 @@ new Vue({
   template: '<App/>',
   beforeMount() {
     utils.adaptive();
+  },
+  mounted(){
   }
 });
