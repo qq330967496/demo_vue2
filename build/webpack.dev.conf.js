@@ -22,6 +22,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    public: 'www.sh-ui.cn',
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

@@ -163,6 +163,7 @@
                 _self.touch_time = new Date().getTime();
             },
             bindMove(e) {
+                e.preventDefault();
                 var _self = this;
                 if (_self.cur_event) {
 //                    console.log(_self.cur_event);

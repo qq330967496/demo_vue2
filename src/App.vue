@@ -35,10 +35,15 @@
 <style lang="scss">
   @import "./assets/css/common";
 
+  html, body{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Microsoft Yahei', '宋体', Arial;
+    /*background: #ccc;*/
+  }
   html, body, #app {
     width: 100%;
     height: 100%;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
     max-width: 750px;
     margin: 0 auto;
     font-size: pxToRem(32);
@@ -46,6 +51,7 @@
   #app{
     display: flex;
     flex-direction: column;
+    /*background: #ebebeb;*/
     *{
 
     }
