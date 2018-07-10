@@ -22,7 +22,7 @@
       现在距离顶部：{{scroll_top}}<br/>
       顶部最大距离：{{max_top}}<br/>
       底部最大距离：{{max_bottom}}<br/>
-      触碰时间：{{touch_time}}<br/>
+      触碰时间：{{touch_time>60000?'触碰中':touch_time}}<br/>
       当前组件高度：{{cur_event_node ? cur_event_node.clientHeight : ''}}<br/>
       body高度：{{total_height}}<br/>
     </div>
@@ -173,7 +173,7 @@
         _self.touch_time = new Date().getTime();
       },
       bindMove(e) {
-        e.preventDefault();
+        pageScroll.lock();
         var _self = this;
         if (_self.cur_event) {
 //                    console.log(_self.cur_event);

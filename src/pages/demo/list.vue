@@ -46,25 +46,6 @@
               箭头项 - 不可用
           </template>
       </sh-list-item>-->
-      <sh-list-item type="more" is_show_sub="true">
-        <template slot="left">
-          下拉项
-        </template>
-        <template slot="sh-list-sub">
-          <sh-list type="sub">
-            <sh-list-item type="arrow">
-              <template slot="left">
-                箭头项
-              </template>
-            </sh-list-item>
-            <sh-list-item type="arrow">
-              <template slot="left">
-                箭头项
-              </template>
-            </sh-list-item>
-          </sh-list>
-        </template>
-      </sh-list-item>
       <sh-list-item type="switch" v-model="switch_val" label="1">
         <template slot="left">
           开关项

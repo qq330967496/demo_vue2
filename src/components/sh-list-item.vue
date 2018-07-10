@@ -35,10 +35,6 @@
 
         </div>
       </div>
-
-      <div class="sh-list-subs" v-if="this_show_sub">
-        <slot name="sh-list-sub"></slot>
-      </div>
     </div>
   </div>
 </template>
